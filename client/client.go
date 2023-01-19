@@ -19,3 +19,8 @@ func NewClient(base int) Client {
 func (c client) Add(a int) int {
 	return op.Add(c.base, a)
 }
+
+
+func (c client) Sub(a int) int {
+	return op.Add(c.base, a)
+}

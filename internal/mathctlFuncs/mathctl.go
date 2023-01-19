@@ -2,32 +2,26 @@ package mathctlFuncs
 
 import (
 	"fmt"
+
 	"github.com/TanmoySG/go-lib-cli-poc/internal/op"
 	"github.com/urfave/cli/v2"
-	"strconv"
 )
 
-func Add(ctx *cli.Context) error {
-	num1, num2 := "1", "2"
-	if ctx.NArg() > 1 {
-		num1 = ctx.Args().Get(0)
-		num2 = ctx.Args().Get(1)
-	}
+func Add(c *cli.Context) error {
+	num1, num2 := c.Int("n1"), c.Int("n2")
 
-	n1, err := strconv.Atoi(num1)
-	if err != nil {
-		fmt.Printf("not a num %s: %s", num1, err)
-		return err
-	}
+	n := op.Add(num1, num2)
+	fmt.Println(n)
 
-	n2, err := strconv.Atoi(num2)
-	if err != nil {
-		fmt.Printf("not a num %s: %s", num2, err)
-		return err
-	}
+	return nil
+}
 
-	n := op.Add(n1, n2)
-	fmt.Printf("%v", n)
+
+func Sub(c *cli.Context) error {
+	num1, num2 := c.Int("n1"), c.Int("n2")
+
+	n := op.Sub(num1, num2)
+	fmt.Println(n)
 
 	return nil
 }

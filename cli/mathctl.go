@@ -11,29 +11,34 @@ import (
 
 func main() {
 
-	var n1,n2 string
+	app := cli.NewApp()
+	app.Name = "Website Lookup CLI"
+	app.Usage = "Let's you query IPs, CNAMEs, MX records and Name Servers!"
 
-	flags := []cli.Flag{
+	addFlags := []cli.Flag{
 		&cli.StringFlag{
-			Name:  "n1",
-			Value: "english",
-			Usage: "to do",
-			Destination: &n1,
+			Name:        "n1",
+			Value:       "english",
+			Usage:       "to do",
 		},
 		&cli.StringFlag{
-			Name:  "n2",
-			Value: "english",
-			Usage: "to do",
-			Destination: &n2,
+			Name:        "n2",
+			Value:       "english",
+			Usage:       "to do",
 		},
-	},
+	}
 
-	app := &cli.App{
-		Commands: cli.Commands{
-			Flags: flags,
-
-		}
-		Action: mathctlFuncs.Add,
+	app.Commands = []*cli.Command{
+		{
+			Name:  "add",
+			Flags: addFlags,
+			Action: mathctlFuncs.Add,
+		},
+		{
+			Name: "sub",
+			Flags: addFlags,
+			Action: mathctlFuncs.Sub,
+		},
 	}
 
 	if err := app.Run(os.Args); err != nil {
