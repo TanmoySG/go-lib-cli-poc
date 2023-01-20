@@ -28,6 +28,17 @@ archives:
     format_overrides:
     - goos: windows
       format: zip
+brews:
+  -
+    name: mathctl
+    homepage: "https://github.com/TanmoySG/go-lib-cli-poc"
+    tap:
+      owner: TanmoySG
+      name: homebrew-TanmoySG
+    commit_author:
+      name: TanmoySG
+      email: tanmoysps@gmail.com
+
 checksum:
   name_template: 'checksums.txt'
 snapshot:
