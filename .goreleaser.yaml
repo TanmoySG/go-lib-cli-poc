@@ -1,7 +1,7 @@
 # This is an example .goreleaser.yml file with some sensible defaults.
 # Make sure to check the documentation at https://goreleaser.com
 builds:
-  - binary: mathctl
+  - binary: go-lib-cli-poc
     goos:
       - darwin
       - linux
@@ -10,8 +10,6 @@ builds:
       - arm64
     env:
       - CGO_ENABLED=0
-    flags:
-      - -mod=vendor
 
 release:
   prerelease: auto
@@ -22,7 +20,7 @@ universal_binaries:
 
 brews:
   -
-    name: mathctl
+    name: go-lib-cli-poc
     homepage: "https://github.com/TanmoySG/go-lib-cli-poc"
     tap:
       owner: TanmoySG
