@@ -1,7 +1,7 @@
 # This is an example .goreleaser.yml file with some sensible defaults.
 # Make sure to check the documentation at https://goreleaser.com
 builds:
-  - binary: mathctl
+  - binary: go-lib-cli-poc
     # main: main.go
     goos:
       - darwin
