@@ -20,7 +20,7 @@ universal_binaries:
 
 
 brews:
-  - name: mathctl
+  - name: go-lib-cli-poc
     homepage: "https://github.com/TanmoySG/go-lib-cli-poc"
     tap:
       owner: TanmoySG
