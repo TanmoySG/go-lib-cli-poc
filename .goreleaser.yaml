@@ -2,7 +2,7 @@
 # Make sure to check the documentation at https://goreleaser.com
 builds:
   - binary: mathctl
-    main: main.go
+    # main: main.go
     goos:
       - darwin
       - linux
@@ -20,8 +20,7 @@ universal_binaries:
 
 
 brews:
-  -
-    name: mathctl
+  - name: mathctl
     homepage: "https://github.com/TanmoySG/go-lib-cli-poc"
     tap:
       owner: TanmoySG
