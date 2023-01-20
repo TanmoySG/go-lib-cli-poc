@@ -1,4 +1,4 @@
-package mathctl
+package main
 
 import (
 	"log"
